@@ -18,6 +18,7 @@ jobs:
             mv ../_book book
             rm -rf .devcontainer
             rm -rf .github
+            rm -rf .gitignore
             git config --global user.email "noreply@bengal.icu"
             git config --global user.name "Automated publish"
             git add .
