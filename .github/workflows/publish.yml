@@ -7,8 +7,6 @@ jobs:
         steps:
         - name: Checkout Sources
           uses: actions/checkout@v3
-          with:
-            token: ${{ secrets.GIT_TOKEN }}
         - name: Build with honkit and publish to Bengal website
           run: |
             npm install honkit
