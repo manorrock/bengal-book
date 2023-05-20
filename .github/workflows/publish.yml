@@ -2,7 +2,7 @@ name: publish
 on:
     workflow_dispatch:
 jobs:
-    maven-plugin-documentation:
+    publish:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Sources
@@ -10,7 +10,7 @@ jobs:
           with:
             ref: 'gh-pages'
             token: ${{ secrets.GIT_TOKEN }}
-        - name: Build with Maven
+        - name: Build with honkit and publish to Bengal website
           run: |
             npm install honkit
             npm install gitbook-plugin-hints
