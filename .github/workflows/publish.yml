@@ -1,0 +1,27 @@
+name: publish
+on:
+    workflow_dispatch:
+jobs:
+    maven-plugin-documentation:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout Sources
+          uses: actions/checkout@v3
+          with:
+            ref: 'gh-pages'
+            token: ${{ secrets.GIT_TOKEN }}
+        - name: Build with Maven
+          run: |
+            npm install honkit
+            npm install gitbook-plugin-hints
+            honkit build
+            git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@github.com/bengalicu/bengal-website
+            cd bengal-website
+            rm -rf book
+            mv ../_book book
+            git config --global user.email "noreply@bengal.icu"
+            git config --global user.name "Automated publish"
+            git add .
+            git commit -a -m "Publishing Bengal Book"
+            git push
+    
