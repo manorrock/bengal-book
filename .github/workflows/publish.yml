@@ -22,6 +22,6 @@ jobs:
             git config --global user.email "noreply@bengal.icu"
             git config --global user.name "Automated publish"
             git add .
-            git commit -a -m "Publishing Bengal Book"
+            git commit -a -m "Automated publishing, see https://github.com/bengalicu/bengal-book"
             git push
     
