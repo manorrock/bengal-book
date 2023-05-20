@@ -8,7 +8,6 @@ jobs:
         - name: Checkout Sources
           uses: actions/checkout@v3
           with:
-            ref: 'gh-pages'
             token: ${{ secrets.GIT_TOKEN }}
         - name: Build with honkit and publish to Bengal website
           run: |
