@@ -16,6 +16,8 @@ jobs:
             cd bengal-website
             rm -rf book
             mv ../_book book
+            rm -rf .devcontainer
+            rm -rf .github
             git config --global user.email "noreply@bengal.icu"
             git config --global user.name "Automated publish"
             git add .
