@@ -13,7 +13,7 @@ jobs:
           run: |
             npm install honkit
             npm install gitbook-plugin-hints
-            honkit build
+            npx honkit build
             git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@github.com/bengalicu/bengal-website
             cd bengal-website
             rm -rf book
