@@ -12,6 +12,7 @@ RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
 # Set `DEVCONTAINER` environment variable to help with orientation
 ENV DEVCONTAINER=true
 
-# npm init --yes
-# npm install honkit --save-dev
-# npm install gitbook-plugin-hints --save-dev
+USER node
+RUN npm init --yes && \
+    npm install honkit --save-dev && \
+    npm install gitbook-plugin-hints --save-dev
