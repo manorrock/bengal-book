@@ -12,16 +12,17 @@ jobs:
             npm install honkit
             npm install gitbook-plugin-hints
             npx honkit build
-            git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@github.com/bengalicu/bengal-website
-            cd bengal-website
-            rm -rf book
-            mv ../_book book
+            git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@github.com/manorrock/website
+            cd website
+            rm -rf bengal/book || true
+            mkdir -p bengal/book
+            mv ../_book bengal/book
             rm -rf .devcontainer
             rm -rf .github
             rm -rf .gitignore
-            git config --global user.email "noreply@bengal.icu"
+            git config --global user.email "noreply@manorrock.com"
             git config --global user.name "Automated publish"
             git add .
-            git commit -a -m "Automated publishing, see https://github.com/bengalicu/bengal-book"
+            git commit -a -m "Automated publishing, see https://github.com/manorrock/bengal-book"
             git push
     
