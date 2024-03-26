@@ -16,9 +16,11 @@ jobs:
             cd website/bengal
             rm -rf book
             mv ../../_book book
+            cd book
             rm -rf .devcontainer
             rm -rf .github
             rm -rf .gitignore
+            cd ..
             git config --global user.email "noreply@manorrock.com"
             git config --global user.name "Automated publish"
             git add .
