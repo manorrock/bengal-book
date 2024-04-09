@@ -31,7 +31,7 @@ The example below creates an instance of ```MyClass```.
 The example below shows how to release an instance.
 
   ```
-  delete(myInstance);
+  delete myInstance;
   ```
 
 ### Defining a class
