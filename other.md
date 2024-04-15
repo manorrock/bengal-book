@@ -45,7 +45,7 @@ is done.
 
 ## Default classes
 
-As the primitive types in Bengal are also classes you will have at minimum the
+As the primitive types in Bengal are actually classes you will have at minimum the
 following classes available in any Bengal runtime.
 
 1. Boolean
@@ -54,3 +54,5 @@ following classes available in any Bengal runtime.
 4. Character
 5. Float
 6. Nil
+7. Java (when the underlying runtime is Java)
+8. Posix
