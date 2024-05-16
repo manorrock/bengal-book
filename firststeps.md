@@ -51,7 +51,7 @@ class methods that can be called. The example below defines a class method for
 pushing an item.
 
   ```
-  method push(item) {
+  push(item) {
   }
   ```
 
