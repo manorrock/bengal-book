@@ -13,7 +13,7 @@ jobs:
             npm install gitbook-plugin-hints
             npx honkit build
             git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@github.com/manorrock/website
-            mkdir -p bengal/0
+            mkdir -p website/bengal/0 || true
             cd website/bengal/0
             rm -rf book
             mv ../../_book book
