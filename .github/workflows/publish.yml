@@ -16,7 +16,7 @@ jobs:
             mkdir -p website/bengal/0 || true
             cd website/bengal/0
             rm -rf book || true
-            mv ../../_book book
+            mv ../../../_book book
             cd book
             rm -rf .devcontainer
             rm -rf .github
