@@ -15,7 +15,7 @@ jobs:
             git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@github.com/manorrock/website
             mkdir -p website/bengal/0 || true
             cd website/bengal/0
-            rm -rf book
+            rm -rf book || true
             mv ../../_book book
             cd book
             rm -rf .devcontainer
