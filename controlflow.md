@@ -24,7 +24,7 @@ determine if an admin email or a non-admin email needs to be sent.
   if (myObject.isAdmin()) then {
     myObject.sendAdminEmail();
   } else {
-    myObkect.sendNonAdminEmail();
+    myObject.sendNonAdminEmail();
   }
   ```
 
